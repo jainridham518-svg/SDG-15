@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eco Shop – Sustainable Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Eco Shop</h1>
+    <p>Green Solutions. Smart Purchases.</p>
+
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="efforts.html">Global Efforts</a>
+    <a href="miyawaki.html">Miyawaki Forests</a>
+    <a href="shopping.html">Shopping</a>
+    <a href="fundraiser.html">Fundraiser</a>
+</nav>
+
+<main>
+    <section class="intro">
+        <h2>Shop Sustainable</h2>
+        <p>Choose from eco-friendly products designed to reduce waste and improve the planet.</p>
+    </section>
+    <section>    <p>Cart Items: <span id="cart-count">0</span> | Total: ₹<span id="amount">0</span></p></section>
+
+    <section class="product-container">
+        <div class="product-card" data-price="20">
+            <img src="pencil.png" alt="Plantable Pencil">
+            <div class="product-info">
+                <h3>Plantable Pencil</h3>
+                <p class="price">₹20</p>
+                <p class="rating">★★★★☆ (120)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="15">
+            <img src="pen.png" alt="Bamboo Pen">
+            <div class="product-info">
+                <h3>Recycled Paper Pen</h3>
+                <p class="price">₹15</p>
+                <p class="rating">★★★★★ (98)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="30">
+            <img src="bottle.png" alt="Bamboo Water Bottle">
+            <div class="product-info">
+                <h3>Bamboo Water Bottle</h3>
+                <p class="price">₹30</p>
+                <p class="rating">★★★★☆ (87)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="40">
+            <img src="bag.png" alt="Recycled Tote Bag">
+            <div class="product-info">
+                <h3>Recycled Tote Bag</h3>
+                <p class="price">₹40</p>
+                <p class="rating">★★★★☆ (105)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="25">
+            <img src="soap.png" alt="Organic Soap">
+            <div class="product-info">
+                <h3>Organic Soap</h3>
+                <p class="price">₹25</p>
+                <p class="rating">★★★★★ (75)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="50">
+            <img src="straw.png" alt="Bamboo Set">
+            <div class="product-info">
+                <h3>Bamboo Straw Set</h3>
+                <p class="price">₹50</p>
+                <p class="rating">★★★★☆ (133)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="35">
+            <img src="toothbrush.png" alt="Coconut Fiber Brush">
+            <div class="product-info">
+                <h3>Coconut Fiber Brush</h3>
+                <p class="price">₹35</p>
+                <p class="rating">★★★☆☆ (56)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="80">
+            <img src="diary.png" alt="Recycled Paper Diary">
+            <div class="product-info">
+                <h3>Recycled Paper Diary</h3>
+                <p class="price">₹80</p>
+                <p class="rating">★★★★★ (145)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="product-card" data-price="60">
+            <img src="seedkit.png" alt="Seed Kit">
+            <div class="product-info">
+                <h3>seedkit</h3>
+                <p class="price">₹60</p>
+                <p class="rating">★★★☆☆ (49)</p>
+                <div class="qty-box">
+                    <button class="minus">-</button><span class="qty">0</span><button class="plus">+</button>
+                </div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <h3>Made by Karan, Jash, Ridham, Vivan</h3>
+</footer>
+
+<script>
+ let cartCount = 0;
+let totalAmount = 0;
+
+document.addEventListener("click", function (e) {
+    const btn = e.target;
+    const card = btn.closest(".product-card");
+    if (!card) return;
+
+    const price = Number(card.dataset.price);
+    const qtyDisplay = card.querySelector(".qty");
+
+    if (btn.classList.contains("plus")) {
+        qtyDisplay.textContent++;
+        cartCount++;
+        totalAmount += price;
+    }
+
+    if (btn.classList.contains("minus") && qtyDisplay.textContent > 0) {
+        qtyDisplay.textContent--;
+        cartCount--;
+        totalAmount -= price;
+    }
+
+    document.getElementById("cart-count").textContent = cartCount;
+    document.getElementById("amount").textContent = totalAmount;
+});
+
+</script>
+
+</body>
+</html>
+
+
